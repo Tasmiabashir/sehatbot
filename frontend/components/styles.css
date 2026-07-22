@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif;
+}
+.main { background-color: #F0F4F8; }
+.block-container { padding: 2rem 2rem 1rem; }
+
+.header-box {
+    background: linear-gradient(135deg, #0B6E6E 0%, #14A098 50%, #0B6E6E 100%);
+    border-radius: 16px;
+    padding: 2rem 2.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 20px rgba(11,110,110,0.3);
+}
+.header-box h1 { color: white; font-size: 2.4rem; font-weight: 700; margin: 0; }
+.header-box p  { color: rgba(255,255,255,0.85); font-size: 1rem; margin: 0.3rem 0 0; }
+
+.chat-container {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    min-height: 420px;
+    max-height: 520px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+.user-bubble {
+    background: linear-gradient(135deg, #0B6E6E, #14A098);
+    color: white;
+    border-radius: 18px 18px 4px 18px;
+    padding: 0.8rem 1.2rem;
+    margin: 0.5rem 0 0.5rem 25%;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+.bot-bubble {
+    background: #F0F4F8;
+    color: #1a1a2e;
+    border-radius: 18px 18px 18px 4px;
+    padding: 0.8rem 1.2rem;
+    margin: 0.5rem 25% 0.5rem 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    border-left: 3px solid #14A098;
+}
+.bot-label {
+    font-size: 0.72rem;
+    color: #14A098;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.stTextInput input {
+    border-radius: 12px !important;
+    border: 2px solid #E2E8F0 !important;
+    padding: 0.8rem 1rem !important;
+    font-size: 0.95rem !important;
+}
+.stTextInput input:focus {
+    border-color: #14A098 !important;
+    box-shadow: 0 0 0 3px rgba(20,160,152,0.1) !important;
+}
+
+.stButton button {
+    background: linear-gradient(135deg, #0B6E6E, #14A098) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 10px !important;
+    padding: 0.6rem 1.5rem !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+}
+.stButton button:hover {
+    opacity: 0.88 !important;
+    transform: translateY(-1px) !important;
+}
+
+section[data-testid="stSidebar"] {
+    background: white !important;
+    border-right: 1px solid #E2E8F0;
+}
+.sidebar-logo {
+    text-align: center;
+    padding: 1rem 0 1.5rem;
+    border-bottom: 1px solid #E2E8F0;
+    margin-bottom: 1rem;
+}
+.sidebar-logo h2 { color: #0B6E6E; font-weight: 700; margin: 0; }
+.sidebar-logo p  { color: #64748b; font-size: 0.8rem; margin: 0; }
+
+.status-badge {
+    display: inline-block;
+    background: #D1FAE5;
+    color: #065F46;
+    border-radius: 20px;
+    padding: 0.2rem 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.upload-section {
+    background: white;
+    border-radius: 14px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    margin-bottom: 1rem;
+}
+.upload-title {
+    font-weight: 600;
+    color: #0B6E6E;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.info-card {
+    background: linear-gradient(135deg, #F0FDF4, #ECFDF5);
+    border: 1px solid #A7F3D0;
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 0.8rem;
+}
+.info-card h4 { color: #065F46; margin: 0 0 0.3rem; font-size: 0.9rem; }
+.info-card p  { color: #047857; font-size: 0.82rem; margin: 0; }
+
+.warning-card {
+    background: #FFFBEB;
+    border: 1px solid #FCD34D;
+    border-radius: 12px;
+    padding: 0.8rem 1.2rem;
+    margin-top: 1rem;
+}
+.warning-card p { color: #92400E; font-size: 0.8rem; margin: 0; }
+
+#MainMenu, footer, header { visibility: hidden; }
