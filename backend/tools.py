@@ -1,7 +1,7 @@
 from langchain.tools import tool
 from langchain_core.messages import HumanMessage
-from rag import search
-from llm import safe_invoke
+from backend.rag import search
+from backend.llm import safe_invoke
 import pytesseract
 from PIL import Image
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"

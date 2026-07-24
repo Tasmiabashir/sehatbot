@@ -8,7 +8,7 @@ os.environ["TRANSFORMERS_OFFLINE"] = "1"  # never phone HuggingFace at startup
 
 from langchain_community.embeddings import SentenceTransformerEmbeddings
 from langchain_community.embeddings import SentenceTransformerEmbeddings
-from config import EMBED_MODEL, CHROMA_PATH, CHUNK_SIZE, CHUNK_OVERLAP, TOP_K, MODE_FOLDERS
+from backend.config import EMBED_MODEL, CHROMA_PATH, CHUNK_SIZE, CHUNK_OVERLAP, TOP_K, MODE_FOLDERS
 
 embeddings = SentenceTransformerEmbeddings(model_name=EMBED_MODEL)
 

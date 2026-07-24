@@ -5,7 +5,7 @@ Backup engine  : Google Gemini (kicks in ONLY when Groq's tokens run out)
 """
 from langchain_groq import ChatGroq
 from langchain_google_genai import ChatGoogleGenerativeAI
-from config import LLM_MODEL, BACKUP_MODEL
+from backend.config import LLM_MODEL, BACKUP_MODEL
 
 # max_retries=0 → if Groq is out of tokens, fail FAST and switch to backup
 # (instead of silently retrying and burning time)
