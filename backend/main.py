@@ -1,7 +1,7 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from schemas import AskRequest, SehatBotResponse
-from agent import run_agent
+from backend.schemas import AskRequest, SehatBotResponse
+from backend.agent import run_agent
 import shutil, os
 
 app = FastAPI(title="SehatBot API", version="1.0.0")
