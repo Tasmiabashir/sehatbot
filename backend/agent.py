@@ -6,8 +6,8 @@ No bind_tools / no JSON tool-calling → nothing for Groq to reject.
 """
 from langgraph.graph import StateGraph, END
 from langchain_core.messages import HumanMessage
-from tools import ALL_TOOLS
-from llm import safe_invoke
+from backend.tools import ALL_TOOLS
+from backend.llm import safe_invoke
 from typing import TypedDict
 
 # Look-up tables built automatically from tools.py
