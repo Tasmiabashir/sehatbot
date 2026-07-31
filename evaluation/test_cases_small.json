@@ -1,0 +1,27 @@
+[
+  {
+    "mode": "medicine_safety",
+    "question": "Is Panadol safe with Brufen?",
+    "ground_truth": "Panadol and Brufen can be taken together safely. The risk level is safe because they work differently and do not counteract each other. You can combine them for better pain relief but do not exceed the recommended doses of either medicine."
+  },
+  {
+    "mode": "lab_report",
+    "question": "My hemoglobin is 9.5, is this normal?",
+    "ground_truth": "A hemoglobin of 9.5 is below the normal range of about 12 to 15.5 for women or 13.5 to 17.5 for men, indicating anemia. This can cause fatigue and weakness. You should consult a doctor for iron studies and treatment."
+  },
+  {
+    "mode": "diet_advisor",
+    "question": "Give me a diet plan for diabetes",
+    "ground_truth": "For diabetes, focus on low glycemic Pakistani foods. Eat karela which helps lower blood sugar, guava which is low GI, masoor daal, brown rice, and non-starchy vegetables like palak and bhindi. Limit or avoid white rice, jalebi, gulab jamun, biryani, and sugary drinks which raise blood sugar quickly."
+  },
+  {
+    "mode": "emergency",
+    "question": "Someone is choking, what do I do right now?",
+    "ground_truth": "If someone is choking, act fast. Encourage them to cough to clear the blockage. If it is visible, try to remove the object. If coughing does not work, give back blows between the shoulder blades and perform abdominal thrusts. Call Rescue 1122 or Edhi 115 for help."
+  },
+  {
+    "mode": "medicine_safety",
+    "question": "Is it safe to drink alcohol with Flagyl?",
+    "ground_truth": "No, drinking alcohol with Flagyl is dangerous. It causes severe nausea, vomiting, flushing and rapid heartbeat because metronidazole blocks alcohol breakdown in the body. Never drink alcohol during and for 48 hours after a Flagyl course."
+  }
+]

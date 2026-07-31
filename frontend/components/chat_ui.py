@@ -1,7 +1,47 @@
 import streamlit as st
 import requests
+import re
 
 API_URL = "http://localhost:8000"
+
+
+def markdown_to_html(text):
+    """Convert the LLM's Markdown into real HTML, since the chat bubble is
+    inserted via unsafe_allow_html and browsers don't render raw Markdown."""
+    lines = text.split('\n')
+    html_lines = []
+    in_list = False
+    for line in lines:
+        stripped = line.strip()
+
+        # Headings: ### Heading  or  ## Heading  -> bold heading
+        heading = re.match(r'^(#{1,6})\s*(.+)$', stripped)
+        if heading:
+            if in_list:
+                html_lines.append('</ul>')
+                in_list = False
+            html_lines.append(f'<div style="font-weight:700;font-size:1.05rem;margin:0.5rem 0 0.25rem">{heading.group(2)}</div>')
+            continue
+
+        # Bullet lines: "* item" or "- item"
+        if stripped.startswith('* ') or stripped.startswith('- '):
+            if not in_list:
+                html_lines.append('<ul>')
+                in_list = True
+            html_lines.append(f'<li>{stripped[2:].strip()}</li>')
+        else:
+            if in_list:
+                html_lines.append('</ul>')
+                in_list = False
+            html_lines.append(line)
+
+    if in_list:
+        html_lines.append('</ul>')
+
+    html = '\n'.join(html_lines)
+    # **bold** -> <strong>bold</strong>  (done after line handling so it works everywhere)
+    html = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', html)
+    return html
 
 MODE_HINTS = {
     "symptom"  : "Symptom check: {}",
@@ -13,33 +53,33 @@ MODE_HINTS = {
 }
 
 def render_chat():
-    st.markdown('<div class="chat-container">', unsafe_allow_html=True)
+    # Build ALL the inner HTML first, then render it in ONE st.markdown call.
+    # (Splitting div-open / content / div-close across separate st.markdown
+    #  calls creates an empty box, since each call is its own isolated block.)
+    inner_html = ""
 
     if not st.session_state.messages:
-        mode    = st.session_state.active_mode
-        st.markdown(f"""
+        inner_html += """
         <div style="text-align:center;padding:3rem 1rem;color:#94a3b8">
             <p style="font-size:1rem;font-weight:500;color:#64748b">
                 How can I help you today?
             </p>
             <p style="font-size:0.85rem">Type your question below in Urdu or English</p>
         </div>
-        """, unsafe_allow_html=True)
+        """
 
     for msg in st.session_state.messages:
         if msg["role"] == "user":
-            st.markdown(
-                f'<div class="user-bubble">{msg["content"]}</div>',
-                unsafe_allow_html=True
-            )
+            inner_html += f'<div class="user-bubble">{msg["content"]}</div>'
         else:
-            st.markdown(f"""
+            formatted = markdown_to_html(msg["content"])
+            inner_html += f"""
             <div class="bot-bubble">
                 <div class="bot-label">🏥 SehatBot</div>
-                {msg["content"]}
-            </div>""", unsafe_allow_html=True)
+                {formatted}
+            </div>"""
 
-    st.markdown('</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="chat-container">{inner_html}</div>', unsafe_allow_html=True)
 
     with st.form("chat_form", clear_on_submit=True):
         c1, c2 = st.columns([5, 1])

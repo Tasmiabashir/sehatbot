@@ -1,8 +1,13 @@
 import os
+from pathlib import Path
 from dotenv import load_dotenv
 
 # Load secret keys from .env file
 load_dotenv()
+
+# Project root = one folder up from this file (backend/config.py -> sehatbot/)
+# so paths work no matter which folder you run python from.
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 # ── LLM (AI Brain) 
 GROQ_API_KEY   = os.getenv("GROQ_API_KEY")
@@ -14,14 +19,14 @@ BACKUP_MODEL   = "gemini-2.5-flash"                  # backup (Gemini)
 EMBED_MODEL  = "all-MiniLM-L6-v2"         
 
 # ── CHROMADB (Vector Database) 
-CHROMA_PATH  = "chroma_db"                
+CHROMA_PATH  = str(PROJECT_ROOT / "chroma_db")
 # ── RAG SETTINGS 
 CHUNK_SIZE    = 500    # each text piece = 500 characters
 CHUNK_OVERLAP = 50     # overlap between pieces = 50 characters
 TOP_K         = 3      # retrieve top 3 matching chunks
 
 # ── KNOWLEDGE BASE FOLDERS 
-KB_BASE = "knowledge_base"
+KB_BASE = str(PROJECT_ROOT / "knowledge_base")
 
 MODE_FOLDERS = {
     "symptom_checker"   : f"{KB_BASE}/mode1_symptoms",

@@ -1,0 +1,16 @@
+{
+  "test_cases": 5,
+  "RAGAS": {
+    "faithfulness": 0.6824,
+    "context_precision": 0.6667,
+    "context_recall": 0.76,
+    "answer_relevancy": 0.8026
+  },
+  "ROUGE": {
+    "rouge1": 0.5945,
+    "rouge2": 0.368,
+    "rougeL": 0.4907
+  },
+  "BLEU": 0.225,
+  "LLM_as_judge_avg_out_of_5": 2.8
+}

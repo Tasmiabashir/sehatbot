@@ -6,6 +6,7 @@ import sys, os
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from components.sidebar import render_sidebar
 from components.chat_ui  import render_chat
+from components.auth     import require_login, render_logout
 
 API_URL = "http://localhost:8000"
 
@@ -19,6 +20,10 @@ st.set_page_config(
 # Load external CSS file
 css_path = pathlib.Path(__file__).parent / "components" / "styles.css"
 st.markdown(f"<style>{css_path.read_text()}</style>", unsafe_allow_html=True)
+
+# ── AUTH GATE: show login/signup and stop until the user is authenticated ──
+if not require_login():
+    st.stop()
 
 # Session state defaults
 if "messages"    not in st.session_state: st.session_state.messages    = []
@@ -37,6 +42,7 @@ MODE_INFO = {
 
 # Render sidebar
 render_sidebar()
+render_logout()
 
 # Render header
 title, subtitle = MODE_INFO[st.session_state.active_mode]

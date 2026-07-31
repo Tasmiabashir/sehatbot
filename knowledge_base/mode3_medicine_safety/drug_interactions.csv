@@ -1,0 +1,31 @@
+drug_a,drug_a_generic,drug_b,drug_b_generic,interaction_level,effect,mechanism,recommendation
+Panadol,Paracetamol,Brufen,Ibuprofen,Safe,Generally safe to take together for pain and fever,They work differently and do not counteract each other,Can be combined for better pain relief but do not exceed recommended doses of either
+Panadol,Paracetamol,Disprin,Aspirin,Safe,Safe combination when used occasionally,Different drug classes with no major overlap,Fine for short term use but avoid aspirin in children under 16
+Brufen,Ibuprofen,Disprin,Aspirin,Caution,Increased risk of stomach bleeding and ulcers,Both are NSAIDs that irritate the stomach lining,Avoid taking together and consult a doctor if both seem needed
+Brufen,Ibuprofen,Ponstan,Mefenamic Acid,Dangerous,High risk of stomach bleeding and kidney damage,Both are NSAIDs with additive harmful effects,Never take two NSAIDs together choose only one
+Augmentin,Amoxicillin Clavulanate,Panadol,Paracetamol,Safe,Safe to take together commonly prescribed alongside,Antibiotic and pain reliever with no interaction,Complete the full antibiotic course and use Panadol for fever as needed
+Risek,Omeprazole,Panadol,Paracetamol,Safe,No interaction between these medicines,Stomach acid reducer and pain reliever act separately,Safe combination often used together during illness
+Risek,Omeprazole,Brufen,Ibuprofen,Safe,Actually beneficial as Risek protects the stomach,Risek reduces acid that Brufen can otherwise irritate,Doctors often prescribe Risek with NSAIDs to prevent stomach damage
+Flagyl,Metronidazole,Alcohol,Alcohol,Dangerous,Severe nausea vomiting flushing and rapid heartbeat,Metronidazole blocks alcohol breakdown in the body,Never drink alcohol during and for 48 hours after Flagyl course
+Disprin,Aspirin,Warfarin,Warfarin,Dangerous,Greatly increased bleeding risk,Both thin the blood with additive effect,Never combine without strict medical supervision and monitoring
+Brufen,Ibuprofen,Warfarin,Warfarin,Dangerous,Serious bleeding risk,NSAID increases the blood thinning effect of warfarin,Avoid this combination and use paracetamol for pain instead
+Brufen,Ibuprofen,Concor,Bisoprolol,Caution,NSAIDs can reduce the blood pressure lowering effect,Ibuprofen causes fluid retention that raises blood pressure,Monitor blood pressure and prefer paracetamol for pain if you have hypertension
+Panadol,Paracetamol,Concor,Bisoprolol,Safe,No interaction with blood pressure medicine,Paracetamol does not affect blood pressure,Preferred pain reliever for people with high blood pressure
+Glucophage,Metformin,Panadol,Paracetamol,Safe,No interaction between diabetes medicine and Panadol,They act on completely different body systems,Safe to use Panadol for fever while on Metformin
+Glucophage,Metformin,Alcohol,Alcohol,Dangerous,Risk of dangerous lactic acidosis and low blood sugar,Alcohol interferes with how Metformin works,Avoid heavy alcohol use while taking Metformin
+Augmentin,Amoxicillin Clavulanate,Brufen,Ibuprofen,Safe,Safe to combine antibiotic with pain reliever,No significant interaction,Take Brufen with food to reduce stomach upset during antibiotic course
+Ciproxin,Ciprofloxacin,Risek,Omeprazole,Caution,Antacid effect may reduce antibiotic absorption,Acid reducers can lower absorption of some antibiotics,Separate the doses by at least two hours
+Ciproxin,Ciprofloxacin,Milk,Dairy Calcium,Caution,Calcium reduces antibiotic effectiveness,Calcium binds to the antibiotic preventing absorption,Avoid dairy within two hours of taking this antibiotic
+Panadol,Paracetamol,Panadol Extra,Paracetamol Caffeine,Dangerous,Risk of paracetamol overdose and liver damage,Both contain paracetamol leading to double dosing,Never take two paracetamol products together watch hidden paracetamol in combos
+Brufen,Ibuprofen,Glucophage,Metformin,Caution,May affect kidney function in combination,NSAIDs can reduce kidney blood flow affecting Metformin clearance,Use cautiously and stay hydrated especially if you have diabetes
+Disprin,Aspirin,Brufen,Ibuprofen,Caution,Ibuprofen may block the heart protective effect of low dose aspirin,Ibuprofen competes with aspirin at the same site,If on aspirin for heart take it well before ibuprofen and consult your doctor
+Loprin,Low Dose Aspirin,Risek,Omeprazole,Safe,Beneficial combination protecting the stomach,Risek protects stomach from aspirin irritation,Commonly prescribed together for heart patients
+Panadol,Paracetamol,Warfarin,Warfarin,Caution,Regular high use may increase bleeding risk slightly,Paracetamol can mildly enhance warfarin effect over time,Occasional use is fine but tell your doctor if using regularly
+Flagyl,Metronidazole,Warfarin,Warfarin,Dangerous,Increased bleeding risk,Metronidazole enhances the blood thinning effect,Requires careful monitoring by a doctor if both needed
+Nims,Nimesulide,Brufen,Ibuprofen,Dangerous,High risk of stomach bleeding and liver stress,Two NSAIDs taken together multiply the harm,Never combine choose only one anti inflammatory medicine
+Softin,Cetirizine,Panadol,Paracetamol,Safe,Safe combination for cold and allergy symptoms,Antihistamine and pain reliever do not interact,Common cold combination but cetirizine may cause drowsiness
+Softin,Cetirizine,Alcohol,Alcohol,Caution,Increased drowsiness and sedation,Both can depress the nervous system,Avoid alcohol to prevent excessive sleepiness while on antihistamines
+Rivotril,Clonazepam,Alcohol,Alcohol,Dangerous,Dangerous sedation and breathing suppression,Both depress the central nervous system,Never combine as it can be life threatening
+Lexotanil,Bromazepam,Rivotril,Clonazepam,Dangerous,Excessive sedation and breathing difficulty,Two sedatives multiply the depressant effect,Never combine benzodiazepines without strict medical supervision
+Ponstan,Mefenamic Acid,Risek,Omeprazole,Safe,Risek helps protect the stomach from Ponstan,Acid reducer counters the stomach irritation from the NSAID,Reasonable combination when Ponstan is needed for pain
+Augmentin,Amoxicillin Clavulanate,Flagyl,Metronidazole,Caution,Sometimes prescribed together for serious infections,Both antibiotics can cause stomach upset combined,Only combine when a doctor prescribes both together

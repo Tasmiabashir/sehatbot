@@ -1,20 +1,23 @@
 # 🏥 SehatBot — Pakistan's AI Health Assistant
 
-A bilingual (Urdu/English) AI medical assistant built for Pakistan. SehatBot answers health questions using a RAG pipeline over Pakistan-specific medical knowledge, routes each question to one of 7 specialized tools via a LangGraph agent, and reads prescription images with OCR.
+A bilingual (Urdu/English) AI medical assistant built for Pakistan. SehatBot answers health questions using a hybrid RAG pipeline over Pakistan-specific medical knowledge, routes each question to one of 7 specialized tools via a LangGraph agent, and reads prescription images with OCR.
 
 > ⚠️ **Disclaimer:** SehatBot provides information only. Always consult a doctor.
 
 ## ✨ Features
 
+- 🔐 **Secure Login/Signup** — salted PBKDF2-HMAC-SHA256 password hashing (100,000 iterations); no plain-text passwords ever stored
 - 🩺 **Symptom Checker** — possible conditions, urgency level, and red-flag warnings
-- 🧪 **Lab Report Analyzer** — explains test values in simple words
-- 💊 **Medicine Safety** — checks drug–drug interactions
+- 🧪 **Lab Report Analyzer** — explains test values in simple words against real reference ranges
+- 💊 **Medicine Safety** — checks real drug–drug interactions (Panadol, Brufen, Disprin, Augmentin, Flagyl and more)
 - 📷 **Prescription OCR** — reads prescription images (Tesseract) and extracts medicines, dosage, and frequency
-- 🧠 **Mental Health Support** — coping tips + Pakistani helplines (Umang)
-- 🥗 **Diet Advisor** — meal plans using Pakistani foods (daal, roti, sabzi)
+- 🧠 **Mental Health Support** — coping tips, Pakistani helplines, and short-term conversation memory so follow-up messages stay in context
+- 🥗 **Diet Advisor** — meal plans using 139+ real Pakistani foods, tagged for diabetes, BP, cholesterol, pregnancy, PCOS, thyroid, and more
 - 🚨 **Emergency Guide** — first-aid steps + emergency numbers (Rescue 1122, Edhi 115)
 - 🌐 **Bilingual** — ask in Urdu or English, get answers in the same language
+- 🛡️ **Safety Guardrails** — crisis detection with real Pakistani helplines, domain restriction (refuses non-medical questions), and PII redaction in logs
 - 🔁 **Provider Failover** — Groq primary → automatic Google Gemini backup on rate limits (no downtime on free tiers)
+- 🔎 **Hybrid Search** — BM25 keyword search + dense vector search, fused with Reciprocal Rank Fusion (RRF) for better retrieval on exact drug/test names
 
 ## 🛠 Tech Stack
 
@@ -22,6 +25,7 @@ A bilingual (Urdu/English) AI medical assistant built for Pakistan. SehatBot ans
 - **LangChain** — LLM orchestration and tool definitions
 - **LangGraph** — agent StateGraph (router node → tool node)
 - **ChromaDB** — persistent vector store for the medical knowledge base
+- **rank-bm25** — keyword search for hybrid retrieval
 - **Sentence-Transformers** (all-MiniLM-L6-v2) — embeddings (offline mode)
 - **Groq** (llama-3.3-70b-versatile) — primary LLM
 - **Google Gemini** (gemini-2.5-flash) — automatic backup LLM
@@ -29,12 +33,36 @@ A bilingual (Urdu/English) AI medical assistant built for Pakistan. SehatBot ans
 - **Streamlit** — frontend chat UI
 - **Tesseract (pytesseract)** — prescription image OCR
 - **Pydantic** — request/response validation
+- **RAGAS, ROUGE, BLEU** — automated evaluation
+- **hashlib / secrets (stdlib)** — password hashing for authentication
 
 ## 🏗 Architecture Highlights
 
 - **Plain-text tool routing:** instead of fragile native JSON tool-calling (which small open models often fail), the LLM answers one tiny question — *which tool?* — as plain text. The code then fills in the tool's parameters deterministically and executes it. More reliable and ~50% fewer tokens per query.
+- **Hybrid retrieval:** every search fuses BM25 keyword matches (exact drug/test names) with dense vector matches (meaning/synonyms) using Reciprocal Rank Fusion — stronger grounding than either method alone.
 - **Graceful degradation:** every LLM call goes through a failover layer (`backend/llm.py`) — if Groq returns 429 (rate limit), the same request is retried on Gemini automatically, with message sanitization for Gemini's stricter format.
+- **Safety-first guardrails:** every message passes through crisis detection (self-harm patterns → immediate helplines), a domain classifier (keyword fast-pass + LLM fallback, refuses non-medical questions), and PII redaction before logging — in that order, before any LLM call happens.
+- **Windowed conversation memory:** the Mental Health mode remembers the last 5 exchanges so follow-up messages stay coherent, while the other 6 one-shot modes stay stateless to save tokens.
 - **Offline embeddings:** HuggingFace offline mode so the app starts without internet access to the model hub.
+- **Self-curated + Kaggle datasets:** knowledge bases combine public Kaggle datasets with self-built, hand-verified data (Pakistani foods, drug interactions, lab reference ranges) to close grounding gaps found during testing.
+
+## 📊 Evaluation
+
+SehatBot was evaluated on a held-out test set using answers generated by the live system (not hand-written):
+
+| Metric | Score |
+|---|---|
+| RAGAS Faithfulness | 0.68 |
+| RAGAS Context Precision | 0.67 |
+| RAGAS Context Recall | 0.76 |
+| RAGAS Answer Relevancy | 0.80 |
+| ROUGE-1 | 0.59 |
+| ROUGE-2 | 0.37 |
+| ROUGE-L | 0.49 |
+| BLEU | 0.23 |
+| LLM-as-judge (1–5, accuracy & safety) | 4.6 |
+
+Run it yourself: `python evaluation/ragas_eval.py` (5-question set) or `python evaluation/ragas_eval.py full` (full set).
 
 ## 📁 Project Structure
 
@@ -44,23 +72,33 @@ sehatbot/
 ├── requirements.txt
 ├── .gitignore
 ├── backend/
-│   ├── main.py        # FastAPI app + routes
-│   ├── agent.py       # LangGraph router → tool executor
-│   ├── llm.py         # Groq → Gemini failover layer
-│   ├── tools.py       # 7 @tool functions (RAG + OCR)
-│   ├── rag.py         # load → chunk → embed → ChromaDB
-│   ├── schemas.py     # Pydantic models
-│   ├── config.py      # settings and model names
-│   └── .env           # API keys (not committed)
+│   ├── main.py         # FastAPI app + routes
+│   ├── agent.py         # LangGraph router → tool executor + guardrail gate
+│   ├── llm.py            # Groq → Gemini failover layer
+│   ├── tools.py          # 7 @tool functions (RAG + OCR)
+│   ├── rag.py             # load → chunk → embed → ChromaDB + hybrid search
+│   ├── memory.py         # windowed conversation memory (mental health)
+│   ├── guardrails.py     # crisis detection, domain restriction, PII redaction
+│   ├── schemas.py        # Pydantic models
+│   ├── config.py         # settings and model names
+│   └── .env              # API keys (not committed)
 ├── frontend/
-│   ├── app.py         # Streamlit entry point
+│   ├── app.py             # Streamlit entry point (auth gate + mode switcher)
 │   └── components/
+│       ├── auth.py        # login / signup (salted PBKDF2 hashing)
 │       ├── sidebar.py
 │       ├── chat_ui.py
 │       └── styles.css
-├── knowledge_base/    # Pakistan-specific medical PDFs
-└── chroma_db/         # auto-generated vector store (not committed)
+├── knowledge_base/        # Pakistan-specific medical data (Kaggle + self-built)
+├── chroma_db/              # auto-generated vector store (not committed)
+└── evaluation/
+    ├── ragas_eval.py       # RAGAS + ROUGE + BLEU + LLM-as-judge
+    ├── test_cases.json      # full test set
+    ├── test_cases_small.json  # token-safe subset
+    └── results.json         # latest evaluation output
 ```
+
+> **Note on structure:** all 7 modes are implemented as a mode-switcher within a single `app.py`, sharing one `chat_ui.py` component, rather than as separate Streamlit multipage files — this avoids duplicated UI code while keeping every mode fully functional.
 
 ## 🚀 Setup
 
@@ -86,22 +124,28 @@ sehatbot/
    GOOGLE_API_KEY=your_gemini_key
    ```
 
-5. **Run the backend**
+5. **Build the knowledge base** (one time, or after updating datasets)
    ```bash
    cd backend
+   python rag.py
+   ```
+
+6. **Run the backend**
+   ```bash
    python main.py        # FastAPI on http://localhost:8000
    ```
 
-6. **Run the frontend** (new terminal)
+7. **Run the frontend** (new terminal)
    ```bash
    cd frontend
    streamlit run app.py
    ```
+   Sign up for an account, log in, and start chatting.
 
 ## 🔌 API Endpoints
 
 | Method | Endpoint               | Description                                    |
-|--------|------------------------|------------------------------------------------|
+|--------|------------------------|-------------------------------------------------|
 | GET    | `/`                    | Health check                                   |
 | POST   | `/ask`                 | Ask a question (Urdu/English) → routed answer  |
 | POST   | `/upload-report`       | Upload a lab report for analysis               |
@@ -111,4 +155,5 @@ sehatbot/
 
 - OCR works best on **typed/printed** prescriptions; handwritten prescriptions are unreliable (a known limitation of Tesseract). Urdu OCR support is planned as future work.
 - Free-tier LLM limits are handled gracefully: users see a friendly bilingual message instead of a frozen UI, and the Gemini backup keeps the app running when Groq's daily quota is exhausted.
-- Planned next steps: conversation memory, guardrails with PII redaction, and RAGAS evaluation with a test-case suite.
+- User credentials are stored locally in `users.json` (gitignored) — this is a demo-grade auth system, not intended for production deployment with real patient data.
+- Planned next steps: LangSmith tracing, translating remaining source datasets fully to English, expanding the evaluation test set.

@@ -1,0 +1,140 @@
+food_name,category,calories_per_serving,serving_size,carb_level,glycemic_index,sodium_level,fat_level,protein_level,suitable_for,avoid_for,notes
+Masoor Daal,Lentils,116,1 cup cooked,Medium,29,Low,Low,High,diabetes;weight_loss;cholesterol,none,Good plant protein source with fiber that slows sugar absorption
+Moong Daal,Lentils,105,1 cup cooked,Medium,25,Low,Low,High,diabetes;weight_loss;kidney_mild,none,Easiest daal to digest often given during illness recovery
+Chana Daal,Lentils,134,1 cup cooked,Medium,28,Low,Low,High,diabetes;cholesterol,gout,High fiber helps control blood sugar spikes
+Mash Daal,Lentils,147,1 cup cooked,Medium,32,Low,Medium,High,weight_loss,kidney_disease,Rich and creamy texture often cooked with ghee increasing fat
+Roti (Whole Wheat),Grains,120,1 medium,High,62,Low,Low,Medium,cholesterol;weight_loss_moderate,diabetes_severe,Better than white bread but portion control needed for diabetics
+Naan (Plain),Grains,262,1 piece,High,71,Medium,Medium,Medium,none,diabetes;weight_loss;BP,Made with refined flour and often brushed with ghee or butter
+Chawal (White Rice),Grains,205,1 cup cooked,High,73,Low,Low,Low,none,diabetes;weight_loss,High glycemic index causes rapid blood sugar rise
+Brown Rice,Grains,216,1 cup cooked,Medium,50,Low,Low,Medium,diabetes;weight_loss;cholesterol,none,Fiber-rich alternative to white rice with slower sugar release
+Paratha (Plain),Grains,300,1 piece,High,65,Low,High,Medium,none,diabetes;weight_loss;cholesterol;BP,Pan-fried in oil or ghee significantly increasing calorie and fat content
+Daliya (Broken Wheat),Grains,158,1 cup cooked,Medium,45,Low,Low,Medium,diabetes;weight_loss;cholesterol,none,Excellent breakfast option with slow digesting carbs
+Palak (Spinach),Vegetables,23,1 cup cooked,Low,15,Low,Low,Medium,diabetes;BP;weight_loss;anemia,none,Rich in iron and low in calories good for almost all conditions
+Karela (Bitter Gourd),Vegetables,17,1 cup cooked,Low,20,Low,Low,Low,diabetes,none,Traditionally used in Pakistan to help lower blood sugar levels
+Bhindi (Okra),Vegetables,33,1 cup cooked,Low,20,Low,Low,Medium,diabetes;weight_loss;cholesterol,none,Contains soluble fiber that helps stabilize blood sugar
+Baingan (Eggplant),Vegetables,35,1 cup cooked,Low,15,Low,Low,Low,diabetes;weight_loss;cholesterol,none,Absorbs oil easily during frying so cooking method matters
+Gobi (Cauliflower),Vegetables,25,1 cup cooked,Low,15,Low,Low,Low,diabetes;weight_loss;kidney_mild,none,Low carb vegetable suitable for most restricted diets
+Matar (Green Peas),Vegetables,62,1 cup cooked,Medium,22,Low,Low,Medium,diabetes_moderate;weight_loss,none,Higher in carbs than leafy vegetables but still nutritious
+Tori (Ridge Gourd),Vegetables,20,1 cup cooked,Low,15,Low,Low,Low,diabetes;weight_loss;BP,none,Very low calorie vegetable common in Pakistani home cooking
+Aloo (Potato),Vegetables,130,1 medium boiled,High,78,Low,Low,Low,none,diabetes;weight_loss,High glycemic index best eaten in small portions with skin on
+Shalgam (Turnip),Vegetables,28,1 cup cooked,Low,30,Low,Low,Low,diabetes;weight_loss,none,Winter vegetable with mild flavor and good fiber content
+Methi (Fenugreek Leaves),Vegetables,13,1 cup cooked,Low,15,Low,Low,Medium,diabetes;cholesterol,none,Studied for blood sugar lowering effects in South Asian diets
+Kaddu (Pumpkin),Vegetables,49,1 cup cooked,Medium,75,Low,Low,Low,weight_loss,diabetes_severe,High glycemic index despite low calories so portion size matters
+Seb (Apple),Fruits,95,1 medium,Medium,36,Low,Low,Low,diabetes_moderate;weight_loss;cholesterol,none,Skin contains fiber that slows sugar absorption best eaten whole
+Amrood (Guava),Fruits,68,1 medium,Low,24,Low,Low,Low,diabetes;weight_loss;BP,none,Low glycemic index fruit widely available and affordable in Pakistan
+Santra (Orange),Fruits,62,1 medium,Medium,40,Low,Low,Low,diabetes_moderate;weight_loss,none,Good vitamin C source but moderate sugar content
+Kela (Banana),Fruits,105,1 medium,High,51,Low,Low,Low,weight_loss_moderate,diabetes_severe,Higher sugar content ripe bananas raise blood sugar faster
+Aam (Mango),Fruits,150,1 cup sliced,High,51,Low,Low,Low,none,diabetes;weight_loss,Seasonal favorite but high natural sugar content requires portion control
+Anaar (Pomegranate),Fruits,144,1 cup seeds,Medium,53,Low,Low,Low,diabetes_moderate;cholesterol,none,Antioxidant rich but moderate sugar so limit portion for diabetics
+Papita (Papaya),Fruits,62,1 cup cubed,Low,30,Low,Low,Low,diabetes;weight_loss;digestion,none,Low calorie fruit that also aids digestion
+Tarbooz (Watermelon),Fruits,46,1 cup cubed,Medium,72,Low,Low,Low,weight_loss,diabetes_severe,High glycemic index but low calorie density due to water content
+Angoor (Grapes),Fruits,104,1 cup,High,59,Low,Low,Low,none,diabetes;weight_loss,Small portions recommended due to concentrated natural sugars
+Murgh (Chicken Breast Skinless),Protein,165,100g cooked,None,0,Low,Low,High,diabetes;weight_loss;cholesterol;kidney_mild,none,Lean protein good for muscle maintenance and blood sugar stability
+Machli (Fish - Rohu),Protein,97,100g cooked,None,0,Low,Low,High,diabetes;cholesterol;BP;weight_loss,none,Rich in omega-3 fatty acids supports heart health
+Anda (Egg),Protein,78,1 large,None,0,Low,Medium,High,diabetes;weight_loss,cholesterol_severe,Excellent protein source but limit yolks if cholesterol is a concern
+Beef (Lean Cuts),Protein,250,100g cooked,None,0,Low,Medium,High,diabetes_moderate,cholesterol;BP;kidney_disease,Higher saturated fat than chicken or fish should be limited
+Mutton,Protein,294,100g cooked,None,0,Low,High,High,none,cholesterol;BP;heart_disease;weight_loss,High fat content common trigger for cholesterol and BP issues in Pakistani diets
+Channay (Chickpeas),Protein,164,1 cup cooked,Medium,28,Low,Low,High,diabetes;weight_loss;cholesterol,none,Versatile legume good in salads and curries
+Doodh (Full Cream Milk),Dairy,149,1 cup,Medium,30,Low,Medium,Medium,none,weight_loss;cholesterol,Consider low fat or skimmed versions for weight and heart conditions
+Doodh (Skimmed Milk),Dairy,83,1 cup,Medium,32,Low,Low,Medium,weight_loss;cholesterol;diabetes,none,Lower calorie option retaining most protein and calcium
+Dahi (Plain Yogurt),Dairy,98,1 cup,Medium,35,Low,Low,Medium,diabetes;weight_loss;digestion,none,Probiotic content supports gut health commonly eaten with meals
+Lassi (Sweet),Dairy,180,1 glass,High,45,Low,Medium,Low,none,diabetes;weight_loss,Added sugar makes this unsuitable for blood sugar control
+Paneer,Dairy,265,100g,Low,27,Low,High,High,diabetes_moderate,weight_loss;cholesterol,Good protein but high fat content especially if fried
+Cheese (Processed),Dairy,113,1 slice,Low,0,High,High,Medium,none,BP;cholesterol;weight_loss,High sodium and saturated fat content
+Ghee,Fats,112,1 tbsp,None,0,Low,High,None,none,weight_loss;cholesterol;heart_disease;BP,Traditional cooking fat but very calorie dense should be used sparingly
+Cooking Oil (Sunflower),Fats,120,1 tbsp,None,0,Low,High,None,none,weight_loss;cholesterol,All oils are calorie dense measured portions recommended
+Samosa,Fried Snacks,262,1 piece,High,60,Medium,High,Low,none,diabetes;weight_loss;cholesterol;BP,Deep fried pastry high in refined carbs and saturated fat
+Pakora,Fried Snacks,315,1 cup,High,65,Medium,High,Low,none,diabetes;weight_loss;cholesterol;BP,Battered and deep fried common Ramzan iftar item best in moderation
+Jalebi,Desserts,150,1 piece,High,80,Low,High,None,none,diabetes;weight_loss;cholesterol,Soaked in sugar syrup one of the worst options for blood sugar control
+Gulab Jamun,Desserts,150,1 piece,High,75,Low,High,Low,none,diabetes;weight_loss;cholesterol,Fried milk solids in sugar syrup very high glycemic load
+Kheer,Desserts,200,1 cup,High,65,Low,Medium,Low,none,diabetes;weight_loss,Rice pudding made with full cream milk and sugar
+Sooji Halwa,Desserts,283,1 cup,High,66,Low,High,Low,none,diabetes;weight_loss;cholesterol,Made with generous ghee and sugar traditional breakfast item
+Cold Drink (Cola),Beverages,140,1 can,High,63,Low,None,None,none,diabetes;weight_loss,Empty calories from sugar with no nutritional benefit
+Fresh Lime Water (No Sugar),Beverages,5,1 glass,Low,0,Low,None,None,diabetes;weight_loss;BP,none,Excellent low calorie hydrating option
+Green Tea,Beverages,2,1 cup,None,0,Low,None,None,diabetes;weight_loss;cholesterol,none,Contains antioxidants and no added sugar when unsweetened
+Doodh Patti Chai (Sweet),Beverages,120,1 cup,Medium,40,Low,Medium,Low,none,diabetes;weight_loss,Regular sugar and full cream milk add up over multiple cups daily
+Sugarcane Juice,Beverages,180,1 glass,High,70,Low,None,None,weight_loss,diabetes_severe,Traditional summer drink but very high in natural sugar
+Badam (Almonds),Nuts,164,28g (23 pieces),Low,15,Low,High,Medium,diabetes;weight_loss;cholesterol,none,Healthy fats and protein good snack in small portions
+Akhrot (Walnuts),Nuts,185,28g,Low,15,Low,High,Medium,diabetes;cholesterol;heart_disease,weight_loss_strict,Omega-3 fatty acids support heart health despite high calorie content
+Chilghoza (Pine Nuts),Nuts,190,28g,Low,15,Low,High,Medium,diabetes,weight_loss_strict,Expensive but nutrient dense traditional Pakistani nut
+Kishmish (Raisins),Dried Fruits,129,28g,High,64,Low,None,Low,weight_loss_moderate,diabetes,Concentrated sugar content much higher than fresh grapes
+Khajoor (Dates),Dried Fruits,277,100g (about 7),High,42,Low,None,Low,none,diabetes_severe;weight_loss,Traditional Ramzan food but very calorie dense despite moderate GI
+Sabz Chai (Green Tea) with Honey,Beverages,25,1 cup,Low,35,Low,None,None,diabetes_moderate,diabetes_severe,Honey adds natural sugar so limit for stricter blood sugar control
+Roti (Multigrain),Grains,110,1 medium,Medium,50,Low,Low,Medium,diabetes;cholesterol;weight_loss,none,Combination of wheat oats and other grains improves fiber content
+Chicken Karahi (Home-style Less Oil),Protein,320,1 cup,Low,10,Medium,Medium,High,diabetes_moderate,BP;cholesterol_strict,Better than restaurant version if made with less oil and tomato base
+Beef Nihari,Protein,450,1 cup,Medium,35,High,High,High,none,BP;cholesterol;weight_loss;heart_disease,Slow cooked with high fat content and significant oil layer on top
+Daal Chawal,Combination,320,1 plate,High,55,Low,Low,Medium,diabetes_moderate;weight_loss_moderate,none,Balanced combination but rice portion should be controlled for diabetics
+Sabzi (Mixed Vegetables),Vegetables,90,1 cup,Low,25,Low,Low,Low,diabetes;weight_loss;BP;cholesterol,none,Best cooked with minimal oil and without cream based gravies
+Chapli Kebab,Protein,280,1 piece,Low,10,High,High,Medium,diabetes_moderate,BP;cholesterol;weight_loss,Peshawari specialty fried in oil with significant sodium from spices
+Seekh Kebab (Grilled),Protein,220,2 pieces,Low,5,Medium,Medium,High,diabetes,BP;weight_loss_strict,Grilling is healthier than frying but still contains fat from meat
+Haleem,Combination,280,1 cup,Medium,40,Medium,Medium,High,diabetes_moderate,weight_loss;BP,Nutritious slow-cooked dish but calorie dense from ghee garnish
+Biryani (Chicken),Combination,350,1 plate,High,65,High,High,Medium,none,diabetes;weight_loss;BP;cholesterol,Combines high glycemic rice with oil and fried onions very calorie dense
+Sabz Achar (Mixed Pickle),Condiments,15,1 tbsp,Low,10,High,Medium,None,none,BP,Very high sodium content should be used sparingly even by healthy individuals
+Imli Chutney,Condiments,30,1 tbsp,Medium,50,Low,None,None,weight_loss_moderate,diabetes,Contains added sugar and jaggery in most preparations
+Roghni Naan,Grains,300,1 piece,High,70,Medium,High,Medium,none,diabetes;weight_loss;cholesterol;BP,Brushed with oil or ghee before baking increasing fat content further
+Sheermal,Grains,320,1 piece,High,68,Low,High,Low,none,diabetes;weight_loss;cholesterol,Slightly sweet saffron bread traditionally served with nihari
+Chana Chaat,Combination,180,1 cup,Medium,30,Medium,Low,Medium,diabetes_moderate;weight_loss,none,Healthy option if made without extra oil or fried papdi
+Fruit Chaat (No Added Sugar),Fruits,120,1 cup,Medium,40,Low,Low,Low,diabetes_moderate;weight_loss,diabetes_severe,Healthier than sweetened versions but still contains natural fruit sugars
+Roasted Chana,Protein,120,1/4 cup,Low,20,Low,Low,Medium,diabetes;weight_loss,none,Good high protein snack alternative to fried options
+Makhan (Butter),Fats,102,1 tbsp,None,0,Low,High,None,none,weight_loss;cholesterol;heart_disease;BP,Saturated fat content makes this a concern for cardiovascular conditions
+Zeera (Cumin) Water,Beverages,8,1 glass,Low,10,Low,None,None,diabetes;weight_loss;digestion,none,Traditional digestive aid often taken before meals
+Ajwain Water,Beverages,5,1 glass,Low,5,Low,None,None,diabetes;weight_loss;digestion,none,Used traditionally for digestive discomfort and bloating
+Sattu Drink,Beverages,140,1 glass,Medium,30,Low,Low,Medium,diabetes;weight_loss,none,Roasted gram flour drink provides protein and sustained energy
+Multani Mitti Chaat,Condiments,20,1 tbsp,Low,15,Medium,None,None,weight_loss,BP,Regional chaat masala preparation moderate sodium content
+Suji (Semolina) Porridge Unsweetened,Grains,180,1 cup,Medium,55,Low,Low,Medium,diabetes_moderate;weight_loss,diabetes_severe,Better than sweet halwa version when prepared without sugar
+Oats (Plain),Grains,150,1 cup cooked,Medium,55,Low,Low,Medium,diabetes;cholesterol;weight_loss,none,Beta-glucan fiber content helps lower cholesterol and slow sugar absorption
+Chia Seeds,Nuts,138,28g,Low,1,Low,Medium,Medium,diabetes;weight_loss;cholesterol,none,High fiber content increasingly popular addition to Pakistani breakfasts
+Flax Seeds (Alsi),Nuts,150,28g,Low,35,Low,High,Medium,diabetes;cholesterol;heart_disease,none,Omega-3 source traditionally used for digestive and heart health
+Karela Juice,Beverages,25,1 glass,Low,15,Low,None,None,diabetes,none,Bitter taste but traditionally consumed for blood sugar management
+Aloo Bukhara (Plums),Fruits,30,1 medium,Low,24,Low,Low,Low,diabetes;weight_loss,none,Low glycemic fruit good for regular consumption
+Falsa,Fruits,73,1 cup,Medium,35,Low,Low,Low,diabetes_moderate;weight_loss,none,Seasonal Pakistani berry rich in antioxidants
+Chikoo (Sapodilla),Fruits,120,1 medium,High,55,Low,Low,Low,weight_loss_moderate,diabetes,Sweet fruit with higher sugar content than most local fruits
+Sarson Ka Saag,Vegetables,120,1 cup,Low,20,Medium,Medium,Medium,diabetes;BP,cholesterol_strict,Traditionally cooked with butter or ghee affecting fat content
+Makai Ki Roti,Grains,140,1 piece,Medium,55,Low,Low,Medium,diabetes_moderate;cholesterol,none,Gluten free corn flatbread traditionally paired with sarson saag
+Karahi Gosht (Mutton),Protein,420,1 cup,Low,10,Medium,High,High,none,BP;cholesterol;heart_disease;weight_loss,High fat red meat dish should be limited for cardiovascular concerns
+Sabudana (Sago),Grains,150,1 cup cooked,High,80,Low,Low,None,weight_loss_moderate,diabetes_severe,Very high glycemic index despite being gluten free
+Besan (Gram Flour) Chilla,Protein,150,1 piece,Medium,35,Low,Low,High,diabetes;weight_loss,none,Good high protein breakfast alternative to paratha
+Roasted Makhana (Fox Nuts),Nuts,106,1 cup,Medium,40,Low,Low,Medium,diabetes;weight_loss;cholesterol,none,Light low calorie snack increasingly popular as healthy alternative
+Thandai (No Sugar Added),Beverages,90,1 glass,Low,20,Low,Medium,Low,diabetes_moderate,diabetes_severe,Traditional drink with nuts and spices sugar content varies by recipe
+Qeema (Minced Meat - Lean),Protein,220,1 cup,Low,5,Medium,Medium,High,diabetes,BP;cholesterol,Lean mince better than fatty cuts still monitor sodium from spices
+Aloo Gosht,Combination,310,1 cup,Medium,50,Medium,High,High,none,diabetes;weight_loss;BP;cholesterol,Combines high GI potato with fatty meat significant calorie contributor
+Palak Paneer,Combination,280,1 cup,Low,20,Medium,High,High,diabetes_moderate,weight_loss;cholesterol,Nutritious spinach base but cream and paneer add substantial fat
+Chicken Corn Soup,Combination,150,1 cup,Medium,30,High,Low,Medium,diabetes_moderate;weight_loss,BP_strict,Restaurant versions often high in sodium and cornstarch thickener
+Vegetable Soup (Clear),Vegetables,60,1 cup,Low,20,Medium,Low,Low,diabetes;weight_loss;cholesterol,BP_strict,Light option though sodium content depends on stock used
+Mixed Salad (No Dressing),Vegetables,35,1 cup,Low,15,Low,None,Low,diabetes;weight_loss;BP;cholesterol,none,Best diet-friendly side dish across nearly all medical conditions
+Raita,Dairy,60,1/2 cup,Low,25,Low,Low,Low,diabetes;weight_loss,BP_strict,Yogurt based side generally healthy unless heavily salted
+Custard (Homemade Less Sugar),Desserts,150,1 cup,Medium,45,Low,Medium,Low,weight_loss_moderate,diabetes,Better than bakery desserts when sugar content is reduced
+Kheeray (Cucumber),Vegetables,16,1 cup,Low,15,Low,None,Low,pregnancy;PCOS;gastric;diabetes;weight_loss,none,Cooling and hydrating good for acidity and hot weather
+Gajar (Carrot),Vegetables,52,1 cup,Medium,35,Low,Low,Low,pregnancy;PCOS;diabetes_moderate;weight_loss,none,Good source of vitamin A important during pregnancy
+Anday ki Zardi (Egg Yolk),Protein,55,1 yolk,None,0,Low,High,Medium,pregnancy;underweight,cholesterol_severe;thyroid_hyper,Rich in choline and iron important for fetal development
+Doodh (Whole Milk) with Dates,Combination,250,1 glass with 3 dates,High,45,Low,Medium,Medium,pregnancy;underweight,diabetes_severe,Traditional energy drink recommended in pregnancy and for weight gain
+Chana Sattu,Beverages,150,1 glass,Medium,30,Low,Low,Medium,pregnancy;underweight;PCOS,none,High protein traditional drink good for sustained energy
+Peanut Butter (Unsweetened),Fats,190,2 tbsp,Low,15,Low,High,Medium,underweight;PCOS,weight_loss_strict,Calorie dense healthy fat good for weight gain plans
+Khajoor (Dates) with Milk,Combination,320,3 pieces with milk,High,50,Low,Medium,Low,pregnancy;underweight;suhoor,diabetes_severe,Traditional Ramzan suhoor food that sustains energy through fasting
+Oats with Milk and Banana,Combination,280,1 bowl,High,55,Low,Low,Medium,underweight;suhoor,diabetes,Good suhoor option providing slow release energy for fasting hours
+Sattu (Roasted Gram) Suhoor Drink,Beverages,140,1 glass,Medium,30,Low,Low,Medium,suhoor;PCOS;diabetes,none,Keeps you full longer during fasting due to protein and fiber
+Kheer for Iftar (Small Portion),Desserts,150,1/2 cup,High,60,Low,Medium,Low,iftar_moderate,diabetes;iftar_severe,Traditional iftar sweet best kept to small portions
+Pakora at Iftar (Baked Alternative),Fried Snacks,180,1 cup baked,Medium,45,Medium,Medium,Low,iftar_moderate,diabetes;cholesterol,Baking instead of deep frying reduces fat significantly
+Chholay for Iftar,Combination,220,1 cup,Medium,35,Medium,Low,High,iftar;diabetes_moderate;suhoor,none,Popular iftar dish good protein and fiber combination
+Fruit Chaat for Iftar,Fruits,140,1 cup,Medium,42,Low,Low,Low,iftar;pregnancy,diabetes_severe,Refreshing and nutrient dense way to break fast
+Zam Zam or Plain Water,Beverages,0,1 glass,None,0,None,None,None,iftar;suhoor;pregnancy;diabetes;PCOS;thyroid;gastric,none,Best way to begin breaking fast before heavier food
+Soybean (Boiled),Protein,173,1 cup,Medium,15,Low,Medium,High,PCOS;thyroid_hypo,thyroid_hyper,High in plant protein though raw soy affects thyroid hormone absorption
+Iodized Salt (Normal Use),Condiments,0,1 tsp,None,0,High,None,None,thyroid_hypo,BP;kidney_disease,Important for thyroid function but limit if BP or kidney concerns exist
+Gobi (Raw Cabbage - Limited),Vegetables,22,1 cup,Low,10,Low,Low,Low,diabetes;weight_loss,thyroid_hypo_excess,Cruciferous vegetables in excess may affect thyroid in sensitive individuals
+Dahi Bhalla (Less Chutney),Combination,220,2 pieces,Medium,40,Medium,Medium,Medium,PCOS_moderate,diabetes;gastric,Fried lentil dumplings in yogurt best in small portion for blood sugar
+Ajwain Paratha (Less Oil),Grains,240,1 piece,High,60,Low,Medium,Medium,gastric,diabetes;weight_loss,Ajwain seeds traditionally help digestion despite fried preparation
+Saunf (Fennel) Water,Beverages,5,1 glass,Low,5,Low,None,None,gastric;pregnancy;digestion,none,Commonly used after meals in Pakistan to ease bloating and acidity
+Adrak (Ginger) Tea,Beverages,10,1 cup,Low,10,Low,None,None,gastric;digestion;pregnancy_moderate,pregnancy_severe,Helps with nausea and digestion though very large amounts avoided in late pregnancy
+Chawal Kanji (Rice Water),Grains,80,1 cup,Medium,60,Low,None,Low,gastric;recovery,diabetes,Light and soothing traditionally given during stomach upset
+Toast (Plain No Butter),Grains,75,1 slice,High,70,Low,None,Low,gastric,diabetes;weight_loss,Bland and easy to digest often recommended during acidity flare-ups
+Kaali Mirch Chai (Less Spice),Beverages,15,1 cup,Low,20,Low,Low,None,gastric_mild,gastric_severe,Milder spice option though very spicy tea can worsen acidity
+Til (Sesame Seeds),Nuts,160,28g,Low,10,Low,High,Medium,elderly;bone_health,weight_loss_strict,Rich in calcium traditionally used for bone strength in winter
+Doodh with Haldi (Turmeric Milk),Combination,160,1 glass,Medium,35,Low,Medium,Medium,elderly;bone_health;immunity,none,Traditional remedy for joint pain and immunity especially in elderly
+Machli (Fish) for Elderly,Protein,97,100g cooked,None,0,Low,Low,High,elderly;bone_health;cholesterol;heart_disease,none,Soft texture and omega-3 content good for aging joints and heart
+Khichdi (Daal Chawal Simple),Combination,220,1 cup,Medium,50,Low,Low,Medium,elderly;recovery;gastric,none,Easy to digest classic recovery food for elderly or after illness
+Sooji Ka Halwa for Kids (Less Sugar),Desserts,220,1/2 cup,High,60,Low,Medium,Low,children_growth,diabetes,Provides quick energy for growing children in reduced sugar version
+Doodh (Full Cream) for Children,Dairy,149,1 cup,Medium,30,Low,Medium,Medium,children_growth;bone_health,none,Important calcium and protein source for growing children
+Anda (Boiled Egg) for Children,Protein,78,1 large,None,0,Low,Medium,High,children_growth;underweight,none,Complete protein supports growth and development in children
+Mash ki Daal for Growth,Lentils,147,1 cup,Medium,32,Low,Medium,High,children_growth;pregnancy,none,Traditionally given to children and pregnant women for iron and protein
+Papaya (Ripe) for Pregnancy Caution,Fruits,62,1 cup,Low,30,Low,Low,Low,digestion,pregnancy_early,Ripe papaya generally fine but unripe papaya traditionally avoided in early pregnancy
+Ajwa Khajoor (Premium Dates),Dried Fruits,277,7 pieces,High,42,Low,None,Low,pregnancy;suhoor;underweight,diabetes_severe,Considered especially beneficial in Islamic tradition around childbirth
