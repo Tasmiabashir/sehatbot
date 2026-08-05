@@ -1,14 +1,17 @@
-from langchain_community.document_loaders import DirectoryLoader, CSVLoader, PyPDFLoader
-from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_community.vectorstores import Chroma
 import os
 os.environ["HF_HUB_OFFLINE"] = "1"
 os.environ["TRANSFORMERS_OFFLINE"] = "1"
+from langchain_community.document_loaders import DirectoryLoader, CSVLoader, PyPDFLoader
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings import SentenceTransformerEmbeddings
 from langchain_core.documents import Document
 from config import EMBED_MODEL, CHROMA_PATH, CHUNK_SIZE, CHUNK_OVERLAP, TOP_K, MODE_FOLDERS
 
-embeddings = SentenceTransformerEmbeddings(model_name=EMBED_MODEL)
+embeddings = SentenceTransformerEmbeddings(
+    model_name=EMBED_MODEL,
+    model_kwargs={"local_files_only": True},
+)
 
 def load_documents(folder):
     docs = []
